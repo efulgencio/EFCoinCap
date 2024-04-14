@@ -19,13 +19,13 @@ Feature LIST folder structure
 |  | | ListView  | Views components |
 |  | | ListModel | Data for feed view |
 |  | Domain | |  |
-|  | | ListCaseUse  | |
-|  | | ListCaseLive | |
-|  | | ListCaseMock | |
+|  | | ListCaseUse  | Define method: getAssets: () -> AnyPublisher<Assets, NetworkError> |
+|  | | ListCaseLive | Implement getAssets. Comunicate with Repository Live |
+|  | | ListCaseMock | Implement getAssets. Comunicate with Repository Mock |
 |  | Data | |  |
-|  | | ListRepository  | |
-|  | | ListRepositoryLive | |
-|  | | ListRepositoryMock | |
+|  | | ListRepository  | Define method: getAssets: () -> AnyPublisher<AssetsDTO, NetworkError> |
+|  | | ListRepositoryLive | Call  -> CombineManager.shared.getData(endpoint: EndPointGrupo.enumAsset(.assets), type: AssetsDTO.self) (Return response after internet API request) |
+|  | | ListRepositoryMock | Call -> try! JSONDecoder().decode(AssetsDTO.self, from: jsonAssets)  (Return MOCK AssetsDTO) |
 
 
 ###### In the next few days I will update information.
