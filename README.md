@@ -4,13 +4,15 @@ About CoinCap API 2.0.  (SwiftUI / Combine / MVMV) View / Domain / Data (UseCase
 Description
 ---
 
-This project contains two features LIST and DETAIL. 
+**This project contains two features LIST and DETAIL.**
 
 The LIST differs from the DETAIL by the characteristic that uses a DTO in the flow that goes from the VIEW -> USE CASE -> REPOSITORY and returns along the same path to the initial VIEW passing through a MAPPER that modifies the value of the response to an ideal format for the VIEWMODEL.
 
 
 Feature LIST folder structure
 ---
+
+**The goal is to call: api.coincap.io/v2/assets and show the list of assets in the view.**
 
 | Folder | SubFolder  | File | Description|
 |--------------|--------------|--------------|--------------|
