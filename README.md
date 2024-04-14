@@ -2,10 +2,33 @@
 About CoinCap API 2.0.  (SwiftUI / Combine / MVMV) View / Domain / Data (UseCase / Repository) 
 
 Description
+---
 
 This project contains two features LIST and DETAIL. 
 
 The LIST differs from the DETAIL by the characteristic that uses a DTO in the flow that goes from the VIEW -> USE CASE -> REPOSITORY and returns along the same path to the initial VIEW passing through a MAPPER that modifies the value of the response to an ideal format for the VIEWMODEL.
+
+
+Feature LIST folder structure
+---
+
+| Folder | SubFolder  | File | Description|
+|--------------|--------------|--------------|--------------|
+| List | | | |
+|  | View | |  |
+|  | | ListView  | Views components |
+|  | | ListModel | Data for feed view |
+|  | Domain | |  |
+|  | | ListCaseUse  | |
+|  | | ListCaseLive | |
+|  | | ListCaseMock | |
+|  | Data | |  |
+|  | | ListRepository  | |
+|  | | ListRepositoryLive | |
+|  | | ListRepositoryMock | |
+
+
+###### In the next few days I will update information.
 
 <!-- Este es un bloque comentado
 
