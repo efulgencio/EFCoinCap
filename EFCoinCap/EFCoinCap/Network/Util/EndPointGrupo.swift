@@ -91,11 +91,11 @@ extension EndPointGrupo: EndPointProtocol {
     
     var method: String {
         switch self {
-            case .enumAsset(let valor):
+            case .enumAsset( _):
                 return URLRequestMethod.get.rawValue
-            case .enumRate(let valor):
+            case .enumRate( _):
                 return URLRequestMethod.get.rawValue
-            case .enumExchange(let valor):
+            case .enumExchange( _):
                 return URLRequestMethod.get.rawValue
         }
     }
@@ -103,7 +103,7 @@ extension EndPointGrupo: EndPointProtocol {
     var parameters: [String : Any] {
         var params: [String: Any] = [:]
         switch self {
-            case .enumRate(let value):
+            case .enumRate( _):
                 params = ["page": 1]
             default:
                 break
