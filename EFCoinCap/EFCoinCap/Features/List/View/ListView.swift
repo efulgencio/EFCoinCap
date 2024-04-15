@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class AssetData: ObservableObject {
+final class AssetData: ObservableObject {
     @Published var idSelected: String = ""
 }
 
