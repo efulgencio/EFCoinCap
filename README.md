@@ -1,5 +1,14 @@
 # EFCoinCap
-About CoinCap API 2.0.  (SwiftUI / Combine / MVMV) View / Domain / Data (UseCase / Repository) 
+About CoinCap API 2.0.   
+
+```swift
+
+SwiftUI / Combine / MVMV 
+
+View / Domain / Data / Repository
+
+This project separates the responsibilities of each layer and contains an architecture easy to maintain and test.
+```
 
 Description
 ---
