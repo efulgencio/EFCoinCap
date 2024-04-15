@@ -28,6 +28,11 @@ struct ListView: View {
         })
         .onAppear {
             Task {
+                // if I have more net fetch I can use for concurrency
+                // async let fetchAsset1: () = viewModel.getAssets1()
+                // async let fetchAsset2: () = viewModel.getAssets2()
+                // let (_, _) = await (fetchAsset1, fetchAsset2)
+                
                 async let fetchAsset: () = viewModel.getAssets()
                 let _ =  await (fetchAsset)
             }
