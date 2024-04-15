@@ -51,10 +51,6 @@ struct DetailView: View {
     }
 }
 
-#Preview {
-    DetailView()
-}
-
 extension DetailView {
     
     private var header: some View {
