@@ -60,9 +60,7 @@ extension DetailView {
     private var header: some View {
         HStack {
             Text("Asset / History")
-                .font(.headline)
-                .fontWeight(.heavy)
-                .animation(.none)
+                .customStyle()
         }
         .padding(.horizontal)
     }
@@ -101,5 +99,19 @@ extension DetailView {
             }
             .padding(.vertical)
         }
+    }
+}
+
+struct CustomTextStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.headline)
+            .fontWeight(.heavy)
+    }
+}
+
+extension Text {
+    func customStyle() -> some View {
+        self.modifier(CustomTextStyle())
     }
 }
