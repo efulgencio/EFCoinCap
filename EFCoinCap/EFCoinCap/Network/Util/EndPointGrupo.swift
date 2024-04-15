@@ -7,9 +7,6 @@
 
 import Foundation
 
-// Ejemplo de cómo usarlo
-// let opcion1 = EndPointGrupo.enumAsset(.assets)
-// let opcion2 = EndPointGrupo.enumRate(.ratesId)
 enum EndPoinAsset {
     case assets
     case assetsId
@@ -58,7 +55,6 @@ enum EndPointExchange {
     }
 }
 
-// Definir el enum que agrupa los otros enums como asociados
 enum EndPointGrupo {
     case enumAsset(EndPoinAsset)
     case enumRate(EndPoinRate)
