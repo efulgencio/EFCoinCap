@@ -65,8 +65,10 @@ extension ListView {
     }
     
     private func segue(asset: Asset) {
-        assetData.idSelected = asset.id ?? "nulo"
-        showDetailView.toggle()
+        if let assetId = asset.id {
+            assetData.idSelected = assetId
+            showDetailView.toggle()
+        }
     }
     
 }
