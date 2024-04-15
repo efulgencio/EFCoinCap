@@ -24,7 +24,6 @@ struct TextValueRow: View {
 }
 
 extension TextValueRow {
-    
     private var textItemColumn: some View {
         HStack(spacing: 0) {
             Text(textItem)
