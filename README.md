@@ -37,6 +37,17 @@ Feature LIST folder structure
 |  | | ListRepositoryLive | Call  -> CombineManager.shared.getData(endpoint: EndPointGrupo.enumAsset(.assets), type: AssetsDTO.self) (Return response after internet API request) |
 |  | | ListRepositoryMock | Call -> try! JSONDecoder().decode(AssetsDTO.self, from: jsonAssets)  (Return MOCK AssetsDTO) |
 
+| Folder | SubFolder  | File | Description|
+|--------------|--------------|--------------|--------------|
+| Network (Folder) | | | |
+|  | URLSessionManager.swift| | |
+|  | Configuration| | |
+|  | Util| | |
+|  | Error | | |
+|  | Mapper | | |
+
+
+
 
 ###### In the next few days I will update information.
 
