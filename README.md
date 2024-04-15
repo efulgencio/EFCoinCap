@@ -54,6 +54,34 @@ Feature LIST folder structure
 
 
 
+Extension: Color
+---
+
+Define colors for easy update aspect app.
+```swift
+extension Color {
+    static let themeNumber = ColorThemeNumber()
+    static let themeAsset = ColorThemeAsset()
+    static let themeOption = ColorThemeOption()
+}
+// Colors for row Asset
+struct ColorThemeAsset {
+    let rank = Color("AssetRank")
+    let symbol = Color("AssetSymbol")
+    let price = Color("AssetPrice")
+}
+// Colors for number positive or negative
+struct ColorThemeNumber {
+    let green = Color("NumberGreen")
+    let red = Color("NumberRed")
+}
+
+struct ColorThemeOption {
+    let assetOption = Color("AssetOptionColor")
+    let historyOption = Color("HistoryOptionColor")
+    let unSelectedOption = Color("UnSelectedOptionColor")
+}
+```
 
 ###### In the next few days I will update information.
 
