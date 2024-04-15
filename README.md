@@ -196,6 +196,30 @@ extension EndPointGrupo: EndPointProtocol {
 }
 
 ```
+Live or Mock 
+---
+
+Inject to ViewModel if you want work with MOCKs or not.
+
+#### ListViewModel.swift
+
+```swift
+class ListViewModel: ObservableObject {
+    
+    @Published var assets = Assets()
+    @Published var histories = HistoriesId()
+    
+    private var listUseCase: ListUseCase
+    private var task: Cancellable?
+    
+    init(listUseCase: ListUseCase = .live) { // Change for ListUseCase = .mock for use of jsons contents
+        self.listUseCase = listUseCase
+    }
+
+    ...
+
+```
+
 
 
 ###### In the next few days I will update information.
