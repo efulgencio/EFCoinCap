@@ -13,5 +13,3 @@ public class ConfigurationNet {
     
     private init() {}
 }
-
-//     public var data: Config = Config(baseUrl: "https://api.themoviedb.org/3/")
