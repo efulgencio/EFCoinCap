@@ -231,6 +231,28 @@ class ListViewModel: ObservableObject {
 
 ```
 
+Style
+---
+
+About style for reuse.
+
+```swift
+
+extension Text {
+    func customStyle() -> some View {
+        self.modifier(CustomTextStyle())
+    }
+}
+
+struct CustomTextStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.headline)
+            .fontWeight(.heavy)
+    }
+}
+
+```
 
 
 ###### In the next few days I will update information.
