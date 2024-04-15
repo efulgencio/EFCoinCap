@@ -98,19 +98,8 @@ extension DetailView {
                     }
                 }
                 .listStyle(PlainListStyle())
-                
             }
             .padding(.vertical)
         }
     }
 }
-
-
-
-
-/*
- Text("Valor pasado: \(assetData.idSelected)")
- Text("Histórico: \(viewModel.histories?.data.count ?? 0)")
- Text("Symbolo de asset remoto: \(viewModel.asset?.data?.symbol! ?? "")")
- Text("Fecha: \(viewModel.asset?.timestamp.formatearFechaDesdeTimestamp() ?? "")")
- */
