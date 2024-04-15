@@ -9,12 +9,10 @@ import Foundation
 import SwiftUI
 
 extension Color {
- //   static let theme = ColorTheme()
     static let themeNumber = ColorThemeNumber()
     static let themeAsset = ColorThemeAsset()
     static let themeOption = ColorThemeOption()
 }
-
 
 struct ColorThemeAsset {
     let rank = Color("AssetRank")
