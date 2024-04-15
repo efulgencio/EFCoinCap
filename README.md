@@ -40,11 +40,17 @@ Feature LIST folder structure
 | Folder | SubFolder  | File | Description|
 |--------------|--------------|--------------|--------------|
 | Network (Folder) | | | |
-|  | URLSessionManager.swift| | |
+|  | URLSessionManager.swift| CombineManager | Method: getData<T: Decodable>(endpoint: EndPointGrupo, id: Int? = nil, type: T.Type, idAsset: String = "") Call API |
 |  | Configuration| | |
+|  | | Config | struct for use in ConfigurationNet with property baseUrl ("https://api.coincap.io/v2/")|
+|  | | Configuration| Use of Config struct. This file feed property baseURL in the EndPointGroup |
 |  | Util| | |
+|  | | EndPointProtocol | Define interface headers, method, urlString, parameters than EndPoint must define |
+|  | | EndPointGroup | Contain EndPointAsset, EndPointRate, EndPointExchange each one have endPoints |
 |  | Error | | |
+|  | | NetWorkError | Extend Error for capture errorType |
 |  | Mapper | | |
+|  | | Mapper | Generic method for mapper values from DTO to Model |
 
 
 
