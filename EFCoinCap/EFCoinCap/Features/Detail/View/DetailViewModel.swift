@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class DetailViewModel: ObservableObject {
+final class DetailViewModel: ObservableObject {
    
     @Published var histories: HistoriesId? = nil
     @Published var asset: AssetId? = nil
@@ -23,12 +23,7 @@ class DetailViewModel: ObservableObject {
     func getAssetId(id: String) {
         task = detailUseCase.getAssetId(id).sink(
             receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    print(error)
-                }
+              self.handleCompletion(completion: completion)
             },
             receiveValue: { [weak self] response in
                 DispatchQueue.main.async {
@@ -42,12 +37,7 @@ class DetailViewModel: ObservableObject {
     func getHistories(id: String) {
         task = detailUseCase.getHistories(id).sink(
             receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    print(error)
-                }
+               
             },
             receiveValue: { [weak self] response in
                 DispatchQueue.main.async {
@@ -55,5 +45,13 @@ class DetailViewModel: ObservableObject {
                 }
             })
     }
-    
+
+    private func handleCompletion(completion: Subscribers.Completion<NetworkError>) {
+        switch completion {
+        case .finished:
+            break
+        case .failure(let error):
+            print(error.localizedDescription)
+        }
+    }
 }
