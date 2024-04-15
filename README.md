@@ -7,6 +7,8 @@ SwiftUI / Combine / MVMV
 
 View / Domain / Data / Repository
 
+Easy to test architecture
+
 This project separates the responsibilities of each layer and contains an architecture easy to maintain and test.
 ```
 
