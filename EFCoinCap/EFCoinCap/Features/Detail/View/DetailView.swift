@@ -65,16 +65,16 @@ extension DetailView {
         Section() {
             VStack(alignment: .leading) {
                 Group {
-                    Text("id: \(viewModel.asset?.data?.id ?? "")")
-                    Text("rank: \(viewModel.asset?.data?.rank ?? "")")
-                    Text("symbol: \(viewModel.asset?.data?.symbol ?? "")")
-                    Text("name: \(viewModel.asset?.data?.name ?? "")")
-                    Text("maxSupply: \(viewModel.asset?.data?.maxSupply?.toDouble().formattedWithAbbreviations() ?? "")")
-                    Text("marketCapUsd: \(viewModel.asset?.data?.marketCapUsd?.toDouble().formattedWithAbbreviations() ?? "")")
-                    Text("volumeUsd24Hr: \(viewModel.asset?.data?.volumeUsd24Hr?.toDouble().formattedWithAbbreviations() ?? "")")
-                    Text("priceUsd: \(viewModel.asset?.data?.priceUsd?.toDouble().formattedWithAbbreviations() ?? "")")
-                    Text("changePercent24Hg: \(viewModel.asset?.data?.changePercent24Hr?.toDouble().formattedWithAbbreviations() ?? "")")
-                    Text("vwap24Hr: \(viewModel.asset?.data?.vwap24Hr?.toDouble().formattedWithAbbreviations() ?? "")")
+                    TextValueRow(textItem: "Id", valueItem: "\(viewModel.asset?.data?.id ?? "")")
+                    TextValueRow(textItem: "Rank", valueItem: "\(viewModel.asset?.data?.rank ?? "")")
+                    TextValueRow(textItem: "Symbol", valueItem: "\(viewModel.asset?.data?.symbol ?? "")")
+                    TextValueRow(textItem: "Name", valueItem: "\(viewModel.asset?.data?.name ?? "")")
+                    TextValueRow(textItem: "MaxSuypply", valueItem: "\(viewModel.asset?.data?.maxSupply?.toDouble().formattedWithAbbreviations() ?? "")")
+                    TextValueRow(textItem: "MarketCapUsd", valueItem: "\(viewModel.asset?.data?.marketCapUsd?.toDouble().formattedWithAbbreviations() ?? "")")
+                    TextValueRow(textItem: "VolumeUsd24Hr", valueItem: "\(viewModel.asset?.data?.volumeUsd24Hr?.toDouble().formattedWithAbbreviations() ?? "")")
+                    TextValueRow(textItem: "PriceUsd", valueItem: "\(viewModel.asset?.data?.priceUsd?.toDouble().formattedWithAbbreviations() ?? "")")
+                    TextValueRow(textItem: "ChangePercent24Hg", valueItem: "\(viewModel.asset?.data?.changePercent24Hr?.toDouble().formattedWithAbbreviations() ?? "")")
+                    TextValueRow(textItem: "Vwap24Hr", valueItem: "\(viewModel.asset?.data?.vwap24Hr?.toDouble().formattedWithAbbreviations() ?? "")")
                 }
                 .font(.callout)
                 .fontWeight(.medium)
