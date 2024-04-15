@@ -16,10 +16,6 @@ class ListViewModel: ObservableObject {
     private var listUseCase: ListUseCase
     private var task: Cancellable?
     
-    enum SortOption {
-        case rank, rankReversed, holdings, holdingsReversed, price, priceReversed
-    }
-    
     init(listUseCase: ListUseCase = .live) {
         self.listUseCase = listUseCase
     }
