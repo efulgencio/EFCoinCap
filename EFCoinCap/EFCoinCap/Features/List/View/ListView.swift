@@ -71,21 +71,3 @@ extension ListView {
     
 }
 
-
-/*
- NavigationView {
-     VStack {
-         header
-         assetsList
-     }
- }
- .onAppear {
-     Task {
-         async let fetchAsset: () = viewModel.getAssets()
-         let _ =  await (fetchAsset)
-     }
- }
- */
-
-
-
