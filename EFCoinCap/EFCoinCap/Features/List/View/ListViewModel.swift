@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ListViewModel: ObservableObject {
+final class ListViewModel: ObservableObject {
     
     @Published var assets = Assets()
     @Published var histories = HistoriesId()
