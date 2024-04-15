@@ -68,7 +68,7 @@ extension DetailView {
     }
     
     private var assetSection: some View {
-        Section(header: Text("")) {
+        Section() {
             VStack(alignment: .leading) {
                 Group {
                     Text("id: \(viewModel.asset?.data?.id ?? "")")
