@@ -48,6 +48,10 @@ struct DetailView: View {
         .onAppear {
             viewModel.getAssetId(id: assetData.idSelected)
         }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
+        }
     }
 }
 
