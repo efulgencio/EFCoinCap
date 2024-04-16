@@ -12,6 +12,7 @@ final class ListViewModel: ObservableObject {
     
     @Published var assets = Assets()
     @Published var histories = HistoriesId()
+    @Published var alertItem: AlertItem?
     
     private var listUseCase: ListUseCase
     private var task: Cancellable?
@@ -26,8 +27,10 @@ final class ListViewModel: ObservableObject {
                 switch completion {
                 case .finished:
                     break
-                case .failure(let error):
-                    print(error)
+                case .failure( _):
+                    DispatchQueue.main.async {
+                        self.alertItem = AlertContext.errorAPI
+                    }
                 }
             },
             receiveValue: { [weak self] response in
