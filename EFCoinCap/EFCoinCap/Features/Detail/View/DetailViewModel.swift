@@ -12,6 +12,7 @@ final class DetailViewModel: ObservableObject {
    
     @Published var histories: HistoriesId? = nil
     @Published var asset: AssetId? = nil
+    @Published var alertItem: AlertItem?
     
     private var detailUseCase: DetailUseCase
     private var task: Cancellable?
@@ -50,8 +51,10 @@ final class DetailViewModel: ObservableObject {
         switch completion {
         case .finished:
             break
-        case .failure(let error):
-            print(error.localizedDescription)
+        case .failure( _):
+            DispatchQueue.main.async {
+                self.alertItem = AlertContext.errorAPI
+            }
         }
     }
 }
